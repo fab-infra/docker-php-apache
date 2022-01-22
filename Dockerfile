@@ -27,6 +27,7 @@ RUN sysconf_addword /etc/sysconfig/apache2 APACHE_MPM ${HTTPD_MPM} &&\
 # Files
 COPY --from=apache /run.sh /run.sh
 COPY --from=apache /srv/www/htdocs/ /srv/www/htdocs/
+COPY ./root /
 RUN chmod -R a+rwX /etc/apache2 /var/log/apache2 /var/run &&\
 	chmod +x /usr/sbin/start_apache2
 
