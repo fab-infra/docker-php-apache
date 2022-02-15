@@ -32,4 +32,4 @@ RUN chmod -R a+rwX /etc/apache2 /var/log/apache2 /var/run &&\
 	chmod +x /usr/sbin/start_apache2
 
 # Ports
-EXPOSE 8080
+EXPOSE 8080 8443
