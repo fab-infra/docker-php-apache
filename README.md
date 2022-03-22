@@ -17,7 +17,12 @@ The following environment variables can be used with this container.
 
 | Variable | Description | Default value |
 | -------- | ----------- | ------------- |
-| SERVER_NAME | Server host name | $(hostname -f) |
+| APACHE_MPM | Multi-Processing Module (prefork, worker, event) | prefork |
+| APACHE_MODULES | Modules to enable (space-separated) | (see Dockerfile) |
+| APACHE_SERVER_FLAGS | Flags to enable (space-separated) | |
+| APACHE_ACCESS_LOG | Access log location and format | /dev/stdout combined |
+| APACHE_ERROR_LOG | Error log location | /dev/stderr |
+| SERVER_NAME | Server host name | localhost |
 | SERVER_ENV | Server environment | production |
 | DEFAULT_DOCROOT | Document root of the default virtual host | /srv/www/htdocs |
 | LISTEN_HTTP_PORT | HTTP port to listen to | 8080 |
@@ -33,7 +38,6 @@ The following container paths can be used to mount a dedicated volume or to cust
 | /etc/php7/apache2/php.ini | PHP configuration |
 | /srv/www/htdocs | Default document root |
 | /var/lib/php7 | Session save path |
-| /var/log/apache2 | Access and error logs |
 
 ## Useful links
 
