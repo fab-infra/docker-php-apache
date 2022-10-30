@@ -1,7 +1,7 @@
-# Apache HTTPD server based on openSUSE Leap 15.3
+# Apache HTTPD server based on openSUSE Leap 15.4
 FROM ghcr.io/fab-infra/apache:2.4-opensuse15 as apache
 
-# PHP based on openSUSE Leap 15.3
+# PHP based on openSUSE Leap 15.4
 FROM ghcr.io/fab-infra/php-cli:7.4-opensuse15
 
 # Environment
