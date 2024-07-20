@@ -2,11 +2,11 @@
 FROM ghcr.io/fab-infra/apache:2.4-opensuse15 AS apache
 
 # PHP based on openSUSE Leap 15.6
-FROM ghcr.io/fab-infra/php-cli:7.4-opensuse15
+FROM ghcr.io/fab-infra/php-cli:8.2-opensuse15
 
 # Environment
 ENV APACHE_MPM="prefork" \
-	APACHE_MODULES="access_compat actions alias auth_basic authn_core authn_file authnz_ldap authz_core authz_groupfile authz_host authz_user autoindex cgi deflate dir env expires filter headers http2 include ldap log_config mime negotiation php7 proxy proxy_ajp proxy_balancer proxy_fcgi proxy_http proxy_wstunnel remoteip reqtimeout rewrite setenvif slotmem_shm socache_shmcb ssl status userdir version vhost_alias" \
+	APACHE_MODULES="access_compat actions alias auth_basic authn_core authn_file authnz_ldap authz_core authz_groupfile authz_host authz_user autoindex cgi deflate dir env expires filter headers http2 include ldap log_config mime negotiation php8 proxy proxy_ajp proxy_balancer proxy_fcgi proxy_http proxy_wstunnel remoteip reqtimeout rewrite setenvif slotmem_shm socache_shmcb ssl status userdir version vhost_alias" \
 	APACHE_SERVER_FLAGS="" \
 	APACHE_ACCESS_LOG="/dev/stdout combined" \
 	APACHE_ERROR_LOG="/dev/stderr" \
@@ -19,7 +19,7 @@ ENV APACHE_MPM="prefork" \
 # Apache HTTPD with mod_php
 RUN zypper in -y apache2 \
 	apache2-prefork \
-	apache2-mod_php7 \
+	apache2-mod_php8 \
 	apache2-icons-oxygen \
 	apache2-utils &&\
 	zypper clean -a

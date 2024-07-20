@@ -35,9 +35,9 @@ The following container paths can be used to mount a dedicated volume or to cust
 | Path | Description |
 | ---- | ----------- |
 | /etc/apache2/vhosts.d | Virtual hosts configuration (*.conf files) |
-| /etc/php7/apache2/php.ini | PHP configuration |
+| /etc/php8/apache2/php.ini | PHP configuration |
 | /srv/www/htdocs | Default document root |
-| /var/lib/php7 | Session save path |
+| /var/lib/php8 | Session save path |
 
 ## Useful links
 
