@@ -33,7 +33,7 @@ COPY --from=apache /run.sh /run.sh
 COPY --from=apache /srv/www/htdocs/ /srv/www/htdocs/
 COPY ./root /
 RUN confd -onetime -backend env &&\
-	chmod -R a+rwX /etc/apache2 /etc/sysconfig/apache2 /var/log/apache2 /var/run &&\
+	chmod -R a+rwX /etc/apache2 /etc/php8 /etc/sysconfig/apache2 /var/log/apache2 /var/run &&\
 	chmod +x /usr/sbin/start_apache2
 
 # Ports

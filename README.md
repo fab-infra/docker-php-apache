@@ -27,6 +27,14 @@ The following environment variables can be used with this container.
 | DEFAULT_DOCROOT | Document root of the default virtual host | /srv/www/htdocs |
 | LISTEN_HTTP_PORT | HTTP port to listen to | 8080 |
 | LISTEN_HTTPS_PORT | HTTPS port to listen to | 8443 |
+| PHP_DATE_TIMEZONE | PHP timezone | Europe/Paris |
+| PHP_ENABLE_OPCACHE | Enables OPcache for PHP scripts | 1 |
+| PHP_MAX_EXECUTION_TIME | Maximum execution time for PHP scripts | 3600 |
+| PHP_MAX_INPUT_TIME | Maximum input time for PHP scripts | 3600 |
+| PHP_MAX_INPUT_VARS | Maximum amount of input variables for PHP scripts | 1000 |
+| PHP_MEMORY_LIMIT | Memory limit for PHP scripts | 4G |
+| PHP_POST_MAX_SIZE | Maximum size for PHP POST requests | 4G |
+| PHP_UPLOAD_MAX_FILESIZE | Maximum file size for PHP uploads | 4G |
 
 ## Volumes
 

@@ -1,0 +1,13 @@
+[template]
+src = "php.ini.tmpl"
+dest = "/etc/php8/apache2/php.ini"
+keys = [
+    "/php/date/timezone",
+    "/php/enable/opcache",
+    "/php/max/execution/time",
+    "/php/max/input/time",
+    "/php/max/input/vars",
+    "/php/memory/limit",
+    "/php/post/max/size",
+    "/php/upload/max/filesize"
+]
