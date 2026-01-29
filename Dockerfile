@@ -1,8 +1,8 @@
-# Apache HTTPD server based on openSUSE Leap 15.6
-FROM ghcr.io/fab-infra/apache:2.4-opensuse15 AS apache
+# Apache HTTPD server based on openSUSE Leap 16.0
+FROM ghcr.io/fab-infra/apache:2.4-opensuse16 AS apache
 
-# PHP based on openSUSE Leap 15.6
-FROM ghcr.io/fab-infra/php-cli:8.2-opensuse15
+# PHP based on openSUSE Leap 16.0
+FROM ghcr.io/fab-infra/php-cli:8.4-opensuse16
 
 # Environment
 ENV APACHE_MPM="prefork" \
@@ -20,7 +20,6 @@ ENV APACHE_MPM="prefork" \
 RUN zypper in -y apache2 \
 	apache2-prefork \
 	apache2-mod_php8 \
-	apache2-icons-oxygen \
 	apache2-utils &&\
 	zypper clean -a
 
